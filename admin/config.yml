@@ -2,6 +2,7 @@ backend:
   name: github
   repo: atomecipreb-jpg/cipreb-web
   branch: main
+  base_url: https://cipreb-oauth.atome-cipreb.workers.dev
 
 media_folder: "images/uploads"
 public_folder: "/cipreb-web/images/uploads"
