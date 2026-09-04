@@ -1,0 +1,34 @@
+{
+  "site": {
+    "name": "CIPReB",
+    "title": "Centro de Investigación del Cáncer de Rosario",
+    "subtitle": "CIPReB & CICR"
+  },
+  "contact": {
+    "phone": "(0341) 123-4567",
+    "email": "contacto@instituto.org",
+    "address": "Facultad de Ciencias Médicas - UNR"
+  },
+  "homeSlides": [
+    {
+      "title": "Servicios a medida",
+      "subtitle": "Diseño de servicios personalizados"
+    },
+    {
+      "title": "Modelos animales",
+      "subtitle": "Producción de Reactivos Biológicos"
+    },
+    {
+      "title": "Ensayos in vitro",
+      "subtitle": "Servicio de ensayos in vitro, biología celular y molecular"
+    },
+    {
+      "title": "Modelos SPF",
+      "subtitle": "Servicio de modelos SPF"
+    },
+    {
+      "title": "Microscopía",
+      "subtitle": "Servicio de Microscopía de Fluorescencia"
+    }
+  ]
+}
