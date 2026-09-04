@@ -1,0 +1,55 @@
+backend:
+  name: github
+  repo: atomecipreb-jpg/cipreb-web
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/cipreb-web/images/uploads"
+
+collections:
+  - name: "contenido"
+    label: "Contenido del sitio"
+    files:
+      - name: "principal"
+        label: "Datos principales"
+        file: "content.json"
+        format: json
+        fields:
+          - label: "Sitio"
+            name: "site"
+            widget: "object"
+            fields:
+              - label: "Nombre"
+                name: "name"
+                widget: "string"
+              - label: "Título"
+                name: "title"
+                widget: "string"
+              - label: "Subtítulo"
+                name: "subtitle"
+                widget: "string"
+
+          - label: "Contacto"
+            name: "contact"
+            widget: "object"
+            fields:
+              - label: "Teléfono"
+                name: "phone"
+                widget: "string"
+              - label: "Email"
+                name: "email"
+                widget: "string"
+              - label: "Dirección"
+                name: "address"
+                widget: "string"
+
+          - label: "Portada"
+            name: "homeSlides"
+            widget: "list"
+            fields:
+              - label: "Título"
+                name: "title"
+                widget: "string"
+              - label: "Subtítulo"
+                name: "subtitle"
+                widget: "string"
