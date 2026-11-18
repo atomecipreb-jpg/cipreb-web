@@ -1,6 +1,10 @@
 # PENDIENTE — Puesta en marcha de la nueva versión
 
-Estado: **construida en local, NO publicada**. El sitio público sigue mostrando "Sitio en construcción".
+Estado: **PUBLICADA el 18/11/2026** en `main` (commit `034a98c`). La portada `index.html` sigue mostrando "Sitio en construcción" a propósito.
+
+Ya funcionando en producción: `/admin/` (Sveltia), `/novedades.html`, `/personal.html`, `/publicaciones.html`, `/servicio.html?s=...`, páginas de sección y redirecciones de las viejas URLs de servicios.
+
+Falta para habilitar a la persona que carga: cuenta de GitHub, invitación con permiso Write y prueba de punta a punta. Ver `docs/PUESTA_EN_MARCHA_ADMIN.md`.
 
 ## Vista previa local
 
