@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Servicio — CIPReB</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="servicio">
+<header class="navbar">
+  <a href="index.html" class="logo-link"><div class="logo" data-site-name>CIPReB<small data-site-title>Centro de Investigación del Cáncer de Rosario</small></div></a>
+  <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav>
+    <div class="dropdown"><button class="dropbtn" type="button">Presentación</button><div class="dropdown-content">
+      <a href="autoridades.html">Autoridades</a>
+      <a href="historia.html">Historia</a>
+      <a href="personal.html">Personal</a>
+      <a href="novedades.html">Novedades</a>
+    </div></div>
+    <div class="dropdown"><button class="dropbtn" type="button">Servicios</button><div class="dropdown-content" data-nav-servicios></div></div>
+    <div class="dropdown"><button class="dropbtn" type="button">Investigación</button><div class="dropdown-content">
+      <a href="proyectos.html">Proyectos</a>
+      <a href="docencia.html">Docencia</a>
+      <a href="divulgacion.html">Divulgación</a>
+      <a href="publicaciones.html">Publicaciones</a>
+    </div></div>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<main class="container" id="contenido">
+  <p class="cargando">Cargando…</p>
+</main>
+
+<footer class="footer">
+  <div>
+    <h3>Contacto</h3>
+    <a data-contact-phone hidden href="#"></a>
+    <a data-contact-email hidden href="#"></a>
+    <div data-contact-address hidden></div>
+  </div>
+  <div>
+    <h3>Secciones</h3>
+    <a href="index.html">Presentación</a>
+    <a href="servicio.html?s=microscopia">Servicios</a>
+    <a href="proyectos.html">Investigación</a>
+    <a href="novedades.html">Novedades</a>
+  </div>
+  <div>
+    <h3>Vínculos institucionales</h3>
+    <div class="links" data-links></div>
+  </div>
+  <div class="copyright" data-copyright></div>
+</footer>
+
+<noscript><p style="text-align:center;padding:20px">Este sitio necesita JavaScript para mostrar el contenido.</p></noscript>
+<script src="assets/vendor/marked.min.js"></script>
+<script src="assets/vendor/purify.min.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "slug": "microscopia",
+      "name": "Microscopía",
+      "short": "Servicio de Microscopía de Fluorescencia",
+      "image": "",
+      "body": "",
+      "contact": ""
+    },
+    {
+      "slug": "invitro",
+      "name": "Ensayos in vitro",
+      "short": "Servicio de ensayos in vitro, biología celular y molecular",
+      "image": "",
+      "body": "",
+      "contact": ""
+    },
+    {
+      "slug": "invivo",
+      "name": "Ensayos in vivo",
+      "short": "Ensayos in vivo",
+      "image": "",
+      "body": "",
+      "contact": ""
+    },
+    {
+      "slug": "proyectos-personalizados",
+      "name": "Proyectos personalizados",
+      "short": "Diseño de servicios personalizados",
+      "image": "",
+      "body": "",
+      "contact": ""
+    },
+    {
+      "slug": "spf",
+      "name": "Modelos SPF",
+      "short": "Servicio de modelos SPF",
+      "image": "",
+      "body": "",
+      "contact": ""
+    }
+  ]
+}

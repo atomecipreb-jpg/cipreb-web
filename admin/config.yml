@@ -5,52 +5,127 @@ backend:
   base_url: https://cipreb-oauth.atome-cipreb.workers.dev
 
 media_folder: "images/uploads"
-public_folder: "/cipreb-web/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "contenido"
-    label: "Contenido del sitio"
+  - name: datos
+    label: "Datos del sitio"
     files:
-      - name: "principal"
-        label: "Datos principales"
-        file: "content.json"
+      - name: sitio
+        label: "Datos generales"
+        file: "content/site.json"
         format: json
         fields:
-          - label: "Sitio"
-            name: "site"
-            widget: "object"
-            fields:
-              - label: "Nombre"
-                name: "name"
-                widget: "string"
-              - label: "Título"
-                name: "title"
-                widget: "string"
-              - label: "Subtítulo"
-                name: "subtitle"
-                widget: "string"
-
+          - { label: "Nombre del centro", name: "name", widget: "string" }
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Subtítulo", name: "subtitle", widget: "string", required: false }
           - label: "Contacto"
             name: "contact"
             widget: "object"
             fields:
-              - label: "Teléfono"
-                name: "phone"
-                widget: "string"
-              - label: "Email"
-                name: "email"
-                widget: "string"
-              - label: "Dirección"
-                name: "address"
-                widget: "string"
-
-          - label: "Portada"
-            name: "homeSlides"
+              - { label: "Teléfono", name: "phone", widget: "string", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Dirección", name: "address", widget: "text", required: false }
+          - label: "Vínculos institucionales"
+            name: "links"
             widget: "list"
+            required: false
             fields:
-              - label: "Título"
-                name: "title"
-                widget: "string"
-              - label: "Subtítulo"
-                name: "subtitle"
-                widget: "string"
+              - { label: "Texto", name: "label", widget: "string" }
+              - { label: "Dirección web", name: "url", widget: "string" }
+          - { label: "Texto del pie", name: "copyright", widget: "string", required: false }
+
+  - name: novedades
+    label: "Novedades"
+    files:
+      - name: lista
+        label: "Novedades publicadas"
+        file: "content/novedades.json"
+        format: json
+        fields:
+          - label: "Novedades"
+            name: "items"
+            widget: "list"
+            label_singular: "novedad"
+            summary: "{{title}} — {{date}}"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Fecha", name: "date", widget: "datetime", type: "date" }
+              - { label: "Resumen corto", name: "summary", widget: "text", required: false }
+              - { label: "Imagen", name: "image", widget: "image", required: false }
+              - { label: "Texto", name: "body", widget: "markdown", required: false }
+
+  - name: personal
+    label: "Personal"
+    files:
+      - name: lista
+        label: "Personas"
+        file: "content/personal.json"
+        format: json
+        fields:
+          - label: "Personas"
+            name: "items"
+            widget: "list"
+            label_singular: "persona"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Nombre completo", name: "name", widget: "string" }
+              - { label: "Cargo", name: "role", widget: "string", required: false }
+              - { label: "Área o sector", name: "area", widget: "string", required: false }
+              - { label: "Foto", name: "photo", widget: "image", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "CV para descargar (PDF)", name: "cv", widget: "file", required: false }
+
+  - name: publicaciones
+    label: "Publicaciones"
+    files:
+      - name: lista
+        label: "Listado de publicaciones"
+        file: "content/publicaciones.json"
+        format: json
+        fields:
+          - label: "Publicaciones"
+            name: "items"
+            widget: "list"
+            label_singular: "publicación"
+            summary: "{{title}} ({{year}})"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Autores", name: "authors", widget: "string", required: false }
+              - { label: "Año", name: "year", widget: "number", value_type: "int", required: false }
+              - { label: "Revista o medio", name: "journal", widget: "string", required: false }
+              - { label: "Enlace externo", name: "link", widget: "string", required: false }
+              - { label: "Archivo PDF", name: "file", widget: "file", required: false }
+
+  - name: servicios
+    label: "Servicios"
+    files:
+      - name: lista
+        label: "Fichas de servicios"
+        file: "content/servicios.json"
+        format: json
+        fields:
+          - label: "Servicios"
+            name: "items"
+            widget: "list"
+            label_singular: "servicio"
+            summary: "{{name}}"
+            fields:
+              - { label: "Nombre", name: "name", widget: "string" }
+              - { label: "Identificador (sin espacios, ej. microscopia)", name: "slug", widget: "string", hint: "No cambiar si el servicio ya existe." }
+              - { label: "Descripción breve", name: "short", widget: "string", required: false }
+              - { label: "Imagen", name: "image", widget: "image", required: false }
+              - { label: "Texto", name: "body", widget: "markdown", required: false }
+              - { label: "Contacto del servicio", name: "contact", widget: "string", required: false }
+
+  - name: paginas
+    label: "Páginas"
+    folder: "content/paginas"
+    format: json
+    extension: "json"
+    create: false
+    identifier_field: "title"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Subtítulo", name: "subtitle", widget: "string", required: false }
+      - { label: "Texto", name: "body", widget: "markdown", required: false }
